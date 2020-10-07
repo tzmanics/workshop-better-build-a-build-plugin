@@ -1,0 +1,25 @@
+{
+  "name": "netlify-plugin-simple-starter",
+  "version": "0.0.1",
+  "description": "The bare minimum files needed for a Build Plugin _へ__(‾◡◝ )>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzmanics/netlify-plugin-simple-starter.git"
+  },
+  "keywords": [
+    "netlify",
+    "netlify-plugin",
+    "build",
+    "plugin"
+  ],
+  "author": "Tara Z. Manicsic <tzmanics@gmail.com> (https://tzmanics.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tzmanics/netlify-plugin-simple-starter/issues"
+  },
+  "homepage": "https://github.com/tzmanics/netlify-plugin-simple-starter#readme"
+}
