@@ -15,7 +15,7 @@ Earlier, we covered creating the `package.json` requirements for our Build Plugi
 * `keywords`: this field should contain "netlify" and "netlify-plugin" keywords
 * `repository` and `bugs`: these should be set to the plugins repo and the issues path of the repo respectively. These are displayed to users when an error occurs inside your plugin.
 
-> [🐙 Feel free to checkout the demo projects `package.json` file to see what the complete file looks like](https://github.com/tzmanics/netlify-plugin-to-all-events/blob/master/package.json).
+> [🐙 Feel free to checkout the demo projects `package.json` file to see what the complete file looks like](https://github.com/tzmanics/workshop-better-build-a-build-plugin/blob/main/7_files_sharing-is-caring/plugin/package.json).
 
 ### The Guidelines
 
