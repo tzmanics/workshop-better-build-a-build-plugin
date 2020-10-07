@@ -1,12 +1,10 @@
 # (* ˘⌣˘)◞[_]♥[_]ヽ(•‿• ) Sharing is Caring
 
-To get us started let's jump into publishing the Build Plugin we created in [part 1](https://www.netlify.com/blog/2020/04/30/whats-a-netlify-build-plugin-series-part-1-using-build-plugins/?utm_source=blog&utm_medium=what-plugin-3-tzm&utm_campaign=devex).
-
-> [🐙 Here's the repo for the plugin we're using](https://github.com/tzmanics/netlify-plugin-to-all-events).
+To get us started let's jump into publishing the Build Plugin we created!
 
 ## Publishing Plugins
 
-In [part 2](https://www.netlify.com/blog/2020/05/20/whats-a-netlify-build-plugin-series-part-3-making-build-plugins/?utm_source=blog&utm_medium=what-plugin-3-tzm&utm_campaign=devex) we covered creating the `package.json` requirements for our Build Plugin. Just to recap we want to include:
+Earlier, we covered creating the `package.json` requirements for our Build Plugin. Just to recap we want to include:
 
 ### `package.json` Pro Tips
 
@@ -19,6 +17,12 @@ In [part 2](https://www.netlify.com/blog/2020/05/20/whats-a-netlify-build-plugin
 
 > [🐙 Feel free to checkout the demo projects `package.json` file to see what the complete file looks like](https://github.com/tzmanics/netlify-plugin-to-all-events/blob/master/package.json).
 
+### The Guidelines
+
+The Netlify team have created some [helpful guidelines](https://github.com/netlify/plugins/blob/master/docs/guidelines.md). Let's take a look at the doc and add what we need to together ♡(*´∀｀*)人(*´∀｀*)♡
+
+[https://github.com/netlify/plugins/blob/master/docs/guidelines.md](https://github.com/netlify/plugins/blob/master/docs/guidelines.md)
+
 ### Pushing the Publish
 
 Using [npm](https://www.npmjs.com/) we can add the Build Plugin to the ecosystem to make it easier for the whole world to use it. To do this we run two commands:
@@ -28,13 +32,11 @@ Using [npm](https://www.npmjs.com/) we can add the Build Plugin to the ecosystem
 
 > 🧐 Each time we publish new updates we'll need to [update the version](https://docs.npmjs.com/about-semantic-versioning) of that package beforehand using `npm version <patch | minor | major>`.
 
-![output of the publish commands](/img/blog/publish.jpg)
-
 With that the plugin will be available to be used by the masses.
 
 ## Spread the Plugin Love
 
-npm is a huge registry so we'll want to add our plugin somewhere everyone who needs it can find it. May introduce you to the [Build Plugins repo](https://github.com/netlify/plugins) where you can find a list of [current plugins](https://github.com/netlify/plugins#community-plugins). There is a [Contributing](https://github.com/netlify/plugins#contributing) section that will list updated steps if they every change. For now, there are just a few simple steps.
+npm is a huge registry so we'll want to add our plugin somewhere everyone who needs it can find it. May introduce you to the [Build Plugins repo](https://github.com/netlify/plugins) where you can find a list of [current plugins](https://github.com/netlify/plugins#community-plugins). Along with the guidelines we just went over, there is a [Contributing](https://github.com/netlify/plugins/blob/master/docs/CONTRIBUTING.md) section that will list updated steps if they every change. For now, there are just a few simple steps.
 
 1. Clone or Fork the [plugins repo](https://github.com/netlify/plugins#community-plugins).
 2. Edit the [`plugins.json`](https://github.com/netlify/plugins/blob/master/plugins.json) file to add your plugin information including:
@@ -49,15 +51,13 @@ npm is a huge registry so we'll want to add our plugin somewhere everyone who ne
    ```json
    {
      "author": "tzmanics",
-     "description": "🔌A Netlify Build Plugin to show you how to use Netlify Build Plugins",
-     "name": "Plugin To All Events",
-     "package": "netlify-plugin-to-all-events",
-     "repo": "https://github.com/tzmanics/netlify-plugin-to-all-events",
+     "description": "🔌An awesome ╭(♡･ㅂ･)و ̑̑ Netlify Build Plugin!",
+     "name": "Awesomeness",
+     "package": "netlify-plugin-awesomeness",
+     "repo": "https://github.com/tzmanics/netlify-plugin-awesomeness",
      "version": "1.3.1"
    },
    ```
-
-   *This is what was added for the plugin we created in [part 2](https://www.netlify.com/blog/2020/05/20/whats-a-netlify-build-plugin-series-part-3-making-build-plugins/?utm_source=blog&utm_medium=what-plugin-3-tzm&utm_campaign=devex).*
 
 3. Once the amazing plugin information is added, we can run `npm run docs` in the base directory to generate the new code with our additions.
 
@@ -77,3 +77,7 @@ If you had a look at the `plugins.json` file we just added to, you may have noti
 | [Prerender SPA 🔗](https://github.com/shortdiv/netlify-plugin-prerender-spa)            | prerenders your SPA into separate pages                           |
 | [Visual Diff (Applitools) 🔗](https://github.com/jlengstorf/netlify-plugin-visual-diff) | checks for any visual changes and gets approval before going live |
 | [Cypress 🔗](https://github.com/cypress-io/netlify-plugin-cypress)                      | runs Cypress end-to-end tests after build                         |
+
+## We Did It!!! ✧*｡٩(ˊᗜˋ*)و✧*｡
+
+Pat yourself on the back! We made a build plugin and it was fantastic! Now, take all you know and build out more awesome build plugins!!
