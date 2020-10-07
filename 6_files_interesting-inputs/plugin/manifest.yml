@@ -1,0 +1,12 @@
+name: netlify-plugin-simple-starter
+inputs:
+  - name: keyword
+    description: Describe what keyword to look for
+    default: toshi
+  - name: databaseUrl
+    description: The URL of the database, duh
+    required: true
+  - name: triggerAll
+    description: Boolean to decided whether to run all the event code
+    default: true
+    required: true
