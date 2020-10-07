@@ -9,9 +9,11 @@ There are a few utils that we can take advantage of when creating a Build Plugin
 * [`git`](https://www.netlify.com/products/functions/?utm_source=blog&utm_medium=what-plugin-2-tzm&utm_campaign=devex): using this utility you can link actions or get information about modified, deleted, or created files since a git commit
 * [`run`](https://github.com/netlify/build/tree/master/packages/run-utils): this utility allows you to run commands inside Netlify Build but currently there is only the `run` command
 
-All of these are documented in the [Netlify build repo](https://github.com/netlify/build/blob/master/packages/) if you'd like to delve a little deeper into the code. Did I already say the possibilities are endless? Well, these utilities make them even more endlessy (not a word but tell me it didn't make sense).
+All of these are documented in the [Netlify build repo](https://github.com/netlify/build/blob/master/packages/) if you'd like to delve a little deeper into the code. Did I already say the possibilities are endless? Well, these utilities make them even more endless-y (not a word but tell me it didn't make sense).
 
-As I pointed out earlier we'll be looking at handling errors using a few functions from `build/errors`. Thankfully, we have three different options for handling the build if our plugin has an error.
+## Error Error ヽ(#ﾟДﾟ)ﾉ
+
+To do a little experimenting let's look into handling errors using a few functions from `build/errors`. Thankfully, we have three different options for handling the build if our plugin has an error.
 
 * `utils.build.failBuild('message')`: will fail the build completely
 * `utils.build.failPlugin('message')`: will not fail the build but will fail the plugin
@@ -33,10 +35,6 @@ In our Build Plugin we can add an error handler like so:
 ...
 ```
 
-![a canceled build error](/img/blog/cancelbuild.jpg)
+> 🐙 this would be a good time to commit cod
 
-There's a lot going on in these logs. First, we see that `onSuccess` was triggered because technically the build happened before we triggered an error so the build was successful. Because we triggered an error we finally got to see the, hopefully often elusive, `onError` event get triggered. The very last line we see the main event, the message that the build has been canceled along with the error we passed in. If we run this on a deployed application the build will also show up as canceled in thr deploy dashboard.
-
-![a screenshot of the canceled build appearing in netlify app dashboard](/img/blog/canceleddashboard.jpg)
-
-> 🐙 In [this repo commit](https://github.com/tzmanics/netlify-plugin-to-all-events/commit/0a4ce9319133fe8b833f2226fc256b095bc92194) we add the different types of error handling to the Build Plugin.
+Let's head back over to the terminal and see what we've got!
